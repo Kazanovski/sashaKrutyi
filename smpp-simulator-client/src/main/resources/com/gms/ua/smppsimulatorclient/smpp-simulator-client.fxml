@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.text.Font?>
+<Scene xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+       fx:controller="com.gms.ua.smppsimulatorclient.Controller">
+    <AnchorPane prefHeight="600.0" prefWidth="900.0">
+        <Separator layoutY="30.0" prefHeight="0.0" prefWidth="900.0" valignment="TOP"/>
+        <Separator layoutY="137.0" prefHeight="0.0" prefWidth="900.0" valignment="TOP"/>
+        <Label layoutX="6.0" layoutY="5.0" text="Binding Settings">
+            <font>
+                <Font size="13.0"/>
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="43.0" text="Hostname"/>
+        <TextField fx:id="hostname" layoutX="77.0" layoutY="39.0" prefHeight="25.0" prefWidth="130.0"/>
+        <Label layoutX="14.0" layoutY="75.0" text="Port"/>
+        <TextField fx:id="port" layoutX="301.0" layoutY="39.0" prefHeight="25.0" prefWidth="130.0"/>
+        <Label layoutX="238.0" layoutY="43.0" text="SystemId"/>
+        <TextField fx:id="systemId" layoutX="301.0" layoutY="71.0" prefHeight="25.0" prefWidth="130.0"/>
+        <Label layoutX="238.0" layoutY="75.0" text="Password"/>
+        <TextField fx:id="password" layoutX="77.0" layoutY="71.0" prefHeight="25.0" prefWidth="130.0"/>
+        <Label layoutX="238.0" layoutY="111.0" text="Mode"/>
+        <ChoiceBox fx:id="mode" layoutX="301.0" layoutY="107.0" prefHeight="25.0" prefWidth="131.0"/>
+        <Button fx:id="connect" onAction="#onConnectButtonClick" layoutX="16.0" layoutY="107.0"
+                mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="Connect"/>
+        <Button fx:id="disconnect" layoutX="100.0" layoutY="107.0" mnemonicParsing="false" prefHeight="25.0"
+                prefWidth="86.0" text="Disconnect"/>
+        <Separator layoutX="447.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="141.0" prefWidth="1.0"/>
+        <Label layoutX="6.0" layoutY="149.0" text="Submit Settings">
+            <font>
+                <Font size="13.0"/>
+            </font>
+        </Label>
+        <Separator layoutY="176.0" prefHeight="0.0" prefWidth="900.0" valignment="TOP"/>
+        <Separator prefHeight="0.0" prefWidth="900.0" valignment="TOP"/>
+        <Label layoutX="14.0" layoutY="189.0" text="SourceAddr"/>
+        <TextField fx:id="sourceAddr" layoutX="90.0" layoutY="185.0" prefHeight="25.0" prefWidth="130.0"/>
+        <Label layoutX="14.0" layoutY="222.0" text="DestAddr"/>
+        <TextField fx:id="destAddr" layoutX="90.0" layoutY="218.0" prefHeight="25.0" prefWidth="130.0"/>
+        <CheckBox fx:id="deliveryReceipt" layoutX="481.0" layoutY="189.0" mnemonicParsing="false"
+                  text="Delivery Receipt"/>
+        <Label layoutX="254.0" layoutY="189.0" text="Data Coding"/>
+        <ChoiceBox fx:id="dataCoding" layoutX="333.0" layoutY="185.0" prefHeight="25.0" prefWidth="131.0"/>
+        <Label layoutX="252.0" layoutY="250.0" text="Text"/>
+        <TextArea fx:id="text" layoutX="286.0" layoutY="222.0" prefHeight="73.0" prefWidth="582.0"/>
+        <Button fx:id="submit" layoutX="11.0" layoutY="275.0" mnemonicParsing="false" prefHeight="25.0"
+                prefWidth="85.0" text="Submit"/>
+        <Separator layoutY="313.0" prefHeight="0.0" prefWidth="900.0" valignment="TOP"/>
+        <Label layoutX="14.0" layoutY="323.0" text="Log">
+            <font>
+                <Font size="13.0"/>
+            </font>
+        </Label>
+        <TextArea fx:id="logs" layoutX="16.0" layoutY="353.0" prefHeight="225.0" prefWidth="865.0"/>
+        <Button fx:id="clearLog" onAction="#oClearLogsButtonClick" layoutX="783.0" layoutY="320.0"
+                mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Clear log"/>
+        <Label layoutX="453.0" layoutY="5.0" text="TLV">
+            <font>
+                <Font size="13.0"/>
+            </font>
+        </Label>
+        <TableView layoutX="464.0" layoutY="39.0" prefHeight="86.0" prefWidth="419.0">
+            <columns>
+                <TableColumn prefWidth="114.0" text="Tag"/>
+                <TableColumn minWidth="0.0" prefWidth="304.0" text="Value"/>
+            </columns>
+        </TableView>
+    </AnchorPane>
+</Scene>
